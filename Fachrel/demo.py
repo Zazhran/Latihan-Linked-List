@@ -8,7 +8,7 @@ class demolinkedlist:
         self.head = None
 
     def append(self, value):
-        NewElement = element(value)
+        NewElement = Element(value, None, None)
 
         if self.head is None:
             self.head = NewElement
@@ -18,7 +18,7 @@ class demolinkedlist:
             current = current.next
 
         current.next = NewElement
-        new_node.prev = current
+        NewElement.prev = current
 
     def ShowAll(self):
         current = self.head
